@@ -70,6 +70,8 @@ from . import cmmlu
 from . import usmle_self_eval_step1
 from . import usmle_self_eval_step2
 from . import usmle_self_eval_step3
+from . import medqa_usmle
+from . import jmle
 
 ########################################
 # Translation tasks
@@ -105,6 +107,8 @@ TASK_REGISTRY = {
     "usmle_self_eval_step1":usmle_self_eval_step1.usmle_self_eval_step1,
     "usmle_self_eval_step2":usmle_self_eval_step2.usmle_self_eval_step2,
     "usmle_self_eval_step3":usmle_self_eval_step3.usmle_self_eval_step3,
+    "medqa_usmle":medqa_usmle.MedQA_USMLE,
+    "jmle":jmle.JMLESingleAnswer,
     "babi": babi.Babi,
     # GLUE
     "cola": glue.CoLA,

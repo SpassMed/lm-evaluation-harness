@@ -38,4 +38,11 @@ class usmle_self_eval_step2(MultipleChoiceTask):
         }
 
     def doc_to_text(self, doc):
-        return f"Question: {doc['query']}\nAnswer:"
+        """<s> [INST] Context: {}. Question: {}.[/INST]\nAnswer: {}</s>"""
+        #return f"<s> [INST] Context: {doc['context']}\nQuestion: {doc['query']}\nAnswer:"
+        # separate context and question
+        _arr = doc["query"].split(".")
+        _context = ".".join(_arr[:-1]) + "." # add back the period
+        _question = _arr[-1] # last element
+        return f"<s> [INST] Context: {_context}\nQuestion: {_question}\n[/INST]</s>Answer:"
+        #return f"Question: {doc['query']}\nAnswer:"
