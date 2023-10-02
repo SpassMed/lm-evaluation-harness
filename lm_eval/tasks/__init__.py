@@ -29,6 +29,8 @@ from . import prost
 from . import mc_taco
 from . import triviaqa
 from . import pubmedqa
+from . import pubmedqa_vast
+from . import medqa_usmle_gbaker
 from . import sciq
 from . import qasper
 from . import qa4mre
@@ -146,6 +148,12 @@ TASK_REGISTRY = {
     "mc_taco": mc_taco.MCTACO,
     # Science related
     "pubmedqa": pubmedqa.Pubmed_QA,
+
+    ### Updated Registry - Anubhav
+    "pubmedqa_vast": pubmedqa_vast.Pubmed_QA,
+    "medqa_usmle_gbaker": medqa_usmle_gbaker.MedQA_USMLE,
+
+    ###
     "sciq": sciq.SciQ,
     "qasper": qasper.QASPER,
     "qa4mre_2011": qa4mre.QA4MRE_2011,

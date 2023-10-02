@@ -1,0 +1,6 @@
+./zz_check_performance.sh: 3: cannot create logs/zz_logs_pubmedqa_SM70-MEDQA_pubmedqa_FT_5s.log: Directory nonexistent
+./zz_check_performance.sh: 3: cannot create ./logs/zz_logs_pubmedqa_SM70-MEDQA_pubmedqa_FT_5s.log: Directory nonexistent
+./check_performance_medqa.sh: 3: tasks: not found
+./check_performance_medqa.sh: 3: tasks: not found
+Selected Tasks: ['medqa_usmle_gbaker']
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:04<00:57,  4.13s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:08<00:52,  4.07s/it]Loading checkpoint shards:  20%|██        | 3/15 [00:12<00:49,  4.11s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [00:16<00:45,  4.11s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [00:21<00:43,  4.33s/it]Loading checkpoint shards:  40%|████      | 6/15 [00:26<00:42,  4.69s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [00:31<00:39,  4.88s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [00:37<00:35,  5.11s/it]
