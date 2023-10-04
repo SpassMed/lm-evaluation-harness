@@ -49,14 +49,14 @@ class MedQA_USMLE(MultipleChoiceTask):
 
     def _process_doc(self, doc):
         _option_dict = {
-            "A": doc['ending0'],
-            "B": doc['ending1'],
-            "C": doc['ending2'],
-            "D": doc['ending3']
+            "A": f"A. {doc['ending0']}",
+            "B": f"B. {doc['ending1']}",
+            "C": f"C. {doc['ending2']}",
+            "D": f"D. {doc['ending3']}"
             }
 
-        _query = doc["sent2"] + "".join([f" {k}. {v}" if i else f"{k}. {v}" \
-                    for i, (k, v) in enumerate(_option_dict.items())])
+        _query = doc["sent2"] + "\n".join([f"{v}" \
+                    for i, (k, v) in enumerate(_option_dict.items())]) # remove "{k}." from here. try line break as separator.
         _choices = list(_option_dict.values())
         _gold = doc['label']
 
@@ -77,4 +77,4 @@ class MedQA_USMLE(MultipleChoiceTask):
     #     }
 
     def doc_to_text(self, doc):
-        return f"Context: {doc['context']}\nQuestion: {doc['query']}\nAnswer:"
+        return f"Question: {doc['query']}\nAnswer:"
