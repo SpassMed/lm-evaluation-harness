@@ -44,5 +44,5 @@ class usmle_self_eval_step1(MultipleChoiceTask):
         _arr = doc["query"].split(".")
         _context = ".".join(_arr[:-1]) + "." # add back the period
         _question = _arr[-1] # last element
-        return f"<s> [INST] Context: {_context}\nQuestion: {_question}\n[/INST]</s>Answer:"
-        #return f"Question: {doc['query']}\nAnswer:"
+        # return f"<s> [INST] Context: {_context}\nQuestion: {_question}\n[/INST]Answer:"
+        return f"Question: {doc['query']}\nAnswer:"
